@@ -1,0 +1,20 @@
+@use "./taskbar.scss";
+@use "./desktopIcons.scss";
+@use "./partials/variables";
+body {
+  background-image: url("../assets/windowsBackground.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+footer {
+  align-self: flex-end;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+}
