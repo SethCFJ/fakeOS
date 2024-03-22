@@ -1,6 +1,8 @@
 @use "./taskbar.scss";
 @use "./desktopIcons.scss";
 @use "./partials/variables";
+@use "./menu.scss";
+@use "./appModal.scss";
 body {
   background-image: url("../assets/windowsBackground.jpg");
   background-size: cover, cover;
@@ -12,9 +14,18 @@ body {
   margin: 0;
   display: flex;
 }
+main {
+  width: 100%;
+  height: 97vh;
+  display: grid;
+  // align-self: center;
+  flex-direction: column;
+}
 footer {
   align-self: flex-end;
   display: inline-block;
   width: 100%;
   padding: 0;
+  position: fixed;
+  height: 3vh;
 }

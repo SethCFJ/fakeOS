@@ -1,0 +1,31 @@
+.appModal {
+  display: none;
+  position: fixed;
+  align-self: center;
+  justify-self: center;
+  width: 30%;
+  aspect-ratio: 3/2;
+  background-color: white;
+  overflow: auto;
+  z-index: 2;
+  border: 3px solid #3b81f4;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  &_header {
+    background-color: #1062cd;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &_exit {
+      margin-right: 10px;
+      height: 80%;
+      aspect-ratio: 1/1;
+      background-image: url("../assets/windowsExit.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

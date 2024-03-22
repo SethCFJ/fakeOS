@@ -6,7 +6,7 @@ function showTime(clock) {
   let min = time.getMinutes();
 
   let am_pm = "AM";
-
+  // turn into 12 hour clock format
   if (hour >= 12) {
     if (hour > 12) hour -= 12;
     am_pm = "PM";

@@ -11,7 +11,66 @@
   <body>
     <header></header>
     <main>
-      <div class="gridContainer"></div>
+      <div class="iconsContainer">
+        <div class="iconsContainer_app" id="toDoListIcon">
+          <img
+            src="./assets/notepadIcon.png"
+            alt="toDoListIcon"
+            class="iconsContainer_app_img"
+          />
+          <p class="iconsContainer_app_text">To Do List</p>
+        </div>
+        <div class="iconsContainer_app" id="rockPaperScissorsIcon">
+          <img
+            src="./assets/scissorsPaperRock.png"
+            alt="rockPaperScissors Icon"
+            class="iconsContainer_app_img"
+          />
+          <p class="iconsContainer_app_text">Rock Paper Scissors</p>
+        </div>
+        <div class="iconsContainer_app" id="calculatorIcon">
+          <img
+            src="./assets/calculatorImg.png"
+            alt="calculator icon"
+            class="iconsContainer_app_img"
+          />
+          <p class="iconsContainer_app_text">Calculator</p>
+        </div>
+      </div>
+      <div class="appModal">
+        <div class="appModal_header">
+          <button class="appModal_header_exit"></button>
+        </div>
+        <div class="appModal_content"></div>
+      </div>
+      <div class="menuModal" id="menuModal">
+        <div class="menuModal_content">
+          <div class="menuModal_content_app" id="toDoList">
+            <img
+              class="menuModal_content_app_img"
+              src="./assets/notepadIcon.png"
+              alt="notes icon"
+            />
+            <p class="menuModal_content_app_text">To Do List</p>
+          </div>
+          <div class="menuModal_content_app" id="rockPaperScissors">
+            <img
+              class="menuModal_content_app_img"
+              src="./assets/scissorsPaperRock.png"
+              alt="notes icon"
+            />
+            <p class="menuModal_content_app_text">Scissors Paper Rock</p>
+          </div>
+          <div class="menuModal_content_app" id="calculator">
+            <img
+              class="menuModal_content_app_img"
+              src="./assets/calculatorImg.png"
+              alt="notes icon"
+            />
+            <p class="menuModal_content_app_text">Calculator</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="taskBar">
