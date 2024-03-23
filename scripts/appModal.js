@@ -1,37 +1,53 @@
-const toDoListBtn = document.getElementById("toDoList");
 const appModal = document.querySelector(".appModal");
-const closeModal = document.querySelector(".appModal_header_exit");
+
+//To Do List Variables
+const toDoListBtn = document.getElementById("toDoList");
 const toDoListIcon = document.getElementById("toDoListIcon");
-const rockPaperScissorsIcon = document.getElementById("rockPaperScissorsIcon");
+const closeToDoList = document.getElementById("closeToDoList");
+const toDoListModal = document.getElementById("toDoListModal");
+//calculator variables
 const calculatorIcon = document.getElementById("calculatorIcon");
+const calculatorModal = document.getElementById("calculatorModal");
+const closeCalculator = document.getElementById("closeCalculator");
+const calculatorBtn = document.getElementById("calculator");
+//Rock Paper Scissors Variables
+const rockPaperScissorsModal = document.getElementById(
+  "rockPaperScissorsModal"
+);
+const rockPaperScissorsIcon = document.getElementById("rockPaperScissorsIcon");
+const rockPaperScissorsBtn = document.getElementById("rockPaperScissors");
+const closeRPS = document.getElementById("closeRPS");
 
-const createElementWithText = (elType, text, parentNode) => {
-  const newEl = document.createElement(elType);
-  const elText = document.createTextNode(text);
-  newEl.appendChild(elText);
-  parentNode.appendChild(newEl);
-};
-
-export function openAndCloseApp() {
+export function openAppCloseApp() {
+  //to do list listeners
   toDoListBtn.addEventListener("click", () => {
-    appModal.style.display = "block";
-  });
-  closeModal.addEventListener("click", () => {
-    appModal.style.display = "none";
+    toDoListModal.classList.add("appModal_visible");
   });
   toDoListIcon.addEventListener("click", () => {
-    appModal.style.display = "block";
+    toDoListModal.classList.add("appModal_visible");
   });
+  closeToDoList.addEventListener("click", () => {
+    toDoListModal.classList.remove("appModal_visible");
+  });
+  //rock paper scissors listeners
   rockPaperScissorsIcon.addEventListener("click", () => {
-    appModal.style.display = "block";
-    createElementWithText("p", "test text here", appModal);
+    rockPaperScissorsModal.classList.add("appModal_visible");
   });
+  rockPaperScissorsBtn.addEventListener("click", () => {
+    rockPaperScissorsModal.classList.add("appModal_visible");
+  });
+  closeRPS.addEventListener("click", () => {
+    rockPaperScissorsModal.classList.remove("appModal_visible");
+  });
+
+  //calculator listeners
   calculatorIcon.addEventListener("click", () => {
-    appModal.style.display = "block";
+    calculatorModal.classList.add("appModal_visible");
   });
-  // window.onclick((event) => {
-  //   if (event.target == appModal) {
-  //     appModal.style.display = "none";
-  //   }
-  // });
+  calculatorBtn.addEventListener("click", () => {
+    calculatorModal.classList.add("appModal_visible");
+  });
+  closeCalculator.addEventListener("click", () => {
+    calculatorModal.classList.remove("appModal_visible");
+  });
 }

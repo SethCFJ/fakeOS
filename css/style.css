@@ -123,6 +123,9 @@
 
 .appModal {
   display: none;
+}
+.appModal_visible {
+  display: block;
   position: fixed;
   align-self: center;
   justify-self: center;
@@ -151,6 +154,16 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.appModal_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appModal_content--calculator_text {
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
 }
 
 body {

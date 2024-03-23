@@ -37,11 +37,36 @@
           <p class="iconsContainer_app_text">Calculator</p>
         </div>
       </div>
-      <div class="appModal">
+      <div class="appModal" id="calculatorModal">
         <div class="appModal_header">
-          <button class="appModal_header_exit"></button>
+          <button class="appModal_header_exit" id="closeCalculator"></button>
         </div>
-        <div class="appModal_content"></div>
+        <div class="appModal_content--calculator" id="calculatorContent">
+          <form id="calc">
+            <p>Number 1 <input type="number" name="number1" id="number1" /></p>
+            <select>
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="/">/</option>
+              <option value="*">*</option>
+            </select>
+            <p>Number 2 <input type="number" name="numer2" id="number2" /></p>
+            <button>Calculate</button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </div>
+      <div class="appModal" id="rockPaperScissorsModal">
+        <div class="appModal_header">
+          <button class="appModal_header_exit" id="closeRPS"></button>
+        </div>
+        <div class="appModal_content" id="rockPaperScissorsContent"></div>
+      </div>
+      <div class="appModal" id="toDoListModal">
+        <div class="appModal_header">
+          <button class="appModal_header_exit" id="closeToDoList"></button>
+        </div>
+        <div class="appModal_content" id="toDoListContent"></div>
       </div>
       <div class="menuModal" id="menuModal">
         <div class="menuModal_content">
