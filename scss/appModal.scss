@@ -1,3 +1,4 @@
+@use "./partials/queries";
 .appModal {
   display: none;
   &_visible {
@@ -5,7 +6,7 @@
     position: fixed;
     align-self: center;
     justify-self: center;
-    width: 30%;
+    width: 50%;
     aspect-ratio: 3/2;
     background-color: white;
     overflow: auto;
@@ -16,11 +17,24 @@
   }
   &_header {
     background-color: #1062cd;
-    width: 100%;
-    height: 10%;
+    width: 50%;
+    height: 3%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+
+    &_text {
+      color: white;
+      display: flex;
+      justify-self: start;
+      padding-left: 10px;
+      object-fit: contain;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
     &_exit {
       margin-right: 10px;
       height: 80%;
@@ -35,12 +49,192 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 100%;
+    width: 100%;
+    padding-top: 3%;
+    //calculator styling
+
     &--calculator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #6494aa;
+
       &_text {
-        font-size: 30px;
+        font-size: 20px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color: red;
+        margin-top: 10px;
+        background-color: #3a5764;
+        border-radius: 10%;
+        text-align: center;
+        @include queries.laptop {
+          font-size: 14px;
+        }
+        @include queries.large-laptop {
+          font-size: 16px;
+        }
+      }
+      &_form {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        @include queries.laptop {
+          gap: 10px;
+        }
+        &_header {
+          font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+          font-size: 80px;
+          @include queries.laptop {
+            margin: 0;
+            font-size: 30px;
+          }
+          @include queries.large-laptop {
+            font-size: 50px;
+          }
+        }
+        &_select {
+          background-color: #90a959;
+          width: 70px;
+          height: 50px;
+          text-align: center;
+          font-size: 40px;
+          @include queries.laptop {
+            font-size: 20px;
+            width: 60px;
+          }
+          @include queries.large-laptop {
+            font-size: 30px;
+            width: 80px;
+          }
+        }
+        &_text {
+          font-size: 30px;
+          font-weight: bold;
+          @include queries.laptop {
+            font-size: 18px;
+          }
+          @include queries.large-laptop {
+            font-size: 24px;
+          }
+        }
+        &_input {
+          height: 22px;
+          @include queries.laptop {
+            height: 18px;
+          }
+          @include queries.large-laptop {
+            height: 24px;
+          }
+        }
+        &_button {
+          background-color: #151515;
+          color: wheat;
+          height: 100%;
+          width: 35%;
+          font-size: 40px;
+          @include queries.laptop {
+            font-size: 24px;
+          }
+          @include queries.large-laptop {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    &--toDoList {
+      width: 70%;
+      height: 90%;
+      background-color: #449dd1;
+      border-radius: 25px;
+      box-shadow: 10px 10px 60px #58a5d2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      &_heading {
+        color: lightgray;
+        font-size: 50px;
+      }
+    }
+    &--rockPaperScissors {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #151515;
+      gap: 30px;
+      &_header {
+        font-size: 50px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        @include queries.laptop {
+          font-size: 30px;
+        }
+        @include queries.large-laptop {
+          font-size: 45px;
+        }
+      }
+      &_heading {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        text-align: center;
+        justify-content: space-evenly;
+
+        @include queries.laptop {
+          font-size: 15px;
+        }
+        @include queries.large-laptop {
+          font-size: 18px;
+        }
+        &--player {
+          color: green;
+        }
+        &--computer {
+          color: red;
+        }
+        &--result {
+          color: #3b81f4;
+        }
+      }
+      &_buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+      &_button {
+        height: 50px;
+        width: 100px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        text-align: center;
+        background-color: #f5d0c5;
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px #f5d0c5;
+        @include queries.large-laptop {
+          font-size: 30px;
+          width: 160px;
+          height: 70px;
+        }
       }
     }
   }
+}
+#toDoListContent {
+  background-color: #0e0e52;
 }

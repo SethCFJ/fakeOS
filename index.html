@@ -37,36 +37,93 @@
           <p class="iconsContainer_app_text">Calculator</p>
         </div>
       </div>
+      <!-- Calculator Modal -->
       <div class="appModal" id="calculatorModal">
         <div class="appModal_header">
+          <p class="appModal_header_text">Calculator</p>
           <button class="appModal_header_exit" id="closeCalculator"></button>
         </div>
         <div class="appModal_content--calculator" id="calculatorContent">
-          <form id="calc">
-            <p>Number 1 <input type="number" name="number1" id="number1" /></p>
-            <select>
+          <form class="appModal_content--calculator_form" id="calc">
+            <h1 class="appModal_content--calculator_form_header">Calculator</h1>
+            <label class="appModal_content--calculator_form_text">
+              Number 1
+              <input
+                class="appModal_content--calculator_form_input"
+                type="number"
+                name="number1"
+                id="number1"
+              />
+            </label>
+            <select class="appModal_content--calculator_form_select">
               <option value="+">+</option>
               <option value="-">-</option>
               <option value="/">/</option>
               <option value="*">*</option>
             </select>
-            <p>Number 2 <input type="number" name="numer2" id="number2" /></p>
-            <button>Calculate</button>
+            <label class="appModal_content--calculator_form_text">
+              Number 2
+              <input
+                class="appModal_content--calculator_form_input"
+                type="number"
+                name="numer2"
+                id="number2"
+              />
+            </label>
+            <button class="appModal_content--calculator_form_button">
+              Calculate
+            </button>
           </form>
-          <div id="result"></div>
+          <div class="appModal_content--calculator_text" id="result"></div>
         </div>
       </div>
+      <!-- Rock Paper Scissors Modal -->
       <div class="appModal" id="rockPaperScissorsModal">
         <div class="appModal_header">
+          <p class="appModal_header_text">Rock Paper Scissors</p>
           <button class="appModal_header_exit" id="closeRPS"></button>
         </div>
-        <div class="appModal_content" id="rockPaperScissorsContent"></div>
+        <div class="appModal_content" id="rockPaperScissorsContent">
+          <div class="appModal_content--rockPaperScissors">
+            <h1 class="appModal_content--rockPaperScissors_header">
+              Rock Paper Scissors
+            </h1>
+            <div class="appModal_content--rockPaperScissors_heading">
+              <h1 class="appModal_content--rockPaperScissors_heading--player">
+                Player:
+              </h1>
+              <h1 class="appModal_content--rockPaperScissors_heading--computer">
+                Computer:
+              </h1>
+              <h1 class="appModal_content--rockPaperScissors_heading--result">
+                Result:
+              </h1>
+            </div>
+            <div class="appModal_content--rockPaperScissors_buttons">
+              <button class="appModal_content--rockPaperScissors_button">
+                Rock</button
+              ><button class="appModal_content--rockPaperScissors_button">
+                Paper</button
+              ><button class="appModal_content--rockPaperScissors_button">
+                Scissors
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- To Do List Modal -->
       <div class="appModal" id="toDoListModal">
         <div class="appModal_header">
+          <p class="appModal_header_text">To Do List</p>
           <button class="appModal_header_exit" id="closeToDoList"></button>
         </div>
-        <div class="appModal_content" id="toDoListContent"></div>
+        <div class="appModal_content" id="toDoListContent">
+          <div class="appModal_content--toDoList">
+            <h2 class="appModal_content--toDoList_heading">To Do List</h2>
+            <input type="text" placeholder="Insert item..." id="inputBox" />
+            <ul id="toDoListUl"></ul>
+          </div>
+        </div>
       </div>
       <div class="menuModal" id="menuModal">
         <div class="menuModal_content">
@@ -84,7 +141,7 @@
               src="./assets/scissorsPaperRock.png"
               alt="notes icon"
             />
-            <p class="menuModal_content_app_text">Scissors Paper Rock</p>
+            <p class="menuModal_content_app_text">Rock Paper Scissors</p>
           </div>
           <div class="menuModal_content_app" id="calculator">
             <img

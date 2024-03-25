@@ -3,6 +3,8 @@
 @use "./partials/variables";
 @use "./menu.scss";
 @use "./appModal.scss";
+@use "./toDoList.scss";
+@use "./partials/queries";
 body {
   background-image: url("../assets/windowsBackground.jpg");
   background-size: cover, cover;

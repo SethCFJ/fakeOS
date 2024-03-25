@@ -1,0 +1,46 @@
+#inputBox {
+  position: relative;
+  width: 80%;
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 10px;
+}
+.done {
+  background-color: green;
+}
+
+#toDoListUl {
+  width: 80%;
+  padding-left: 0;
+  overflow-y: auto;
+
+  max-width: 100%;
+  overflow-x: hidden;
+}
+#toDoListUl li {
+  background-color: #78c0e0;
+  margin-top: 15px;
+  font-size: 25px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  box-shadow: 5px 5px 5px #4b6c79;
+  cursor: pointer;
+  color: white;
+}
+#toDoListUl li.done {
+  background-color: green;
+}
+#toDoListUl li div {
+  width: 30px;
+  height: 30px;
+  padding-right: 15px;
+
+  content: url(../assets/trash.png);
+}
