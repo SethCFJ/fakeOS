@@ -1,0 +1,22 @@
+$s: 1024px;
+$m: 1440px;
+
+$lg: 2050px;
+
+@mixin laptop {
+  @media only screen and (max-width: $m) {
+    @content;
+  }
+}
+
+@mixin large-laptop {
+  @media only screen and (min-width: ($m)) and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: ($lg + 1px)) {
+    @content;
+  }
+}
