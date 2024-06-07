@@ -1,0 +1,497 @@
+.taskBar {
+  width: 100%;
+  height: 3vh;
+  background: linear-gradient(#547eb5, #0443e2 99%);
+  display: block;
+}
+.taskBar_startBtn {
+  width: 6vw;
+  height: 100%;
+  border-right: 2px solid #1a5f1b;
+  background: radial-gradient(#30a02f 90%, #238226);
+  border-radius: 0% 10% 10% 0%;
+  float: left;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1440px) {
+  .taskBar_startBtn {
+    gap: 5px;
+  }
+}
+.taskBar_startBtn_text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  user-select: none;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1440px) {
+  .taskBar_startBtn_text {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .taskBar_startBtn_text {
+    font-size: 20px;
+  }
+}
+.taskBar_startBtn_img {
+  object-fit: contain;
+  height: 90%;
+  width: 30%;
+}
+.taskBar_timeBox {
+  width: 10vw;
+  height: 100%;
+  background: radial-gradient(#399fd0, #128be8 90%);
+  float: right;
+  border-left: 2px solid #003985;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.taskBar_timeBox_text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  color: #d4e2ff;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
+}
+.iconsContainer_app {
+  height: 125px;
+  width: 125px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.iconsContainer_app_text {
+  font-size: 25px;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+.iconsContainer_app_img {
+  object-fit: contain;
+  height: 70%;
+}
+
+.menuModal {
+  display: none;
+}
+.menuModal_visible {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 50%;
+  background-color: #1062cd;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 50vh;
+  width: 25vw;
+  margin-bottom: 3vh;
+  display: block;
+  border-top-right-radius: 5px;
+}
+.menuModal_content {
+  background-color: #d3e5fa;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menuModal_content_app {
+  height: 15%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(180, 172, 172);
+}
+.menuModal_content_app_img {
+  object-fit: contain;
+  height: 95%;
+  width: 30%;
+}
+.menuModal_content_app_text {
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 1440px) {
+  .menuModal_content_app_text {
+    margin: 0;
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .menuModal_content_app_text {
+    font-size: 25px;
+  }
+}
+
+.appModal {
+  display: none;
+}
+.appModal_visible {
+  display: block;
+  position: fixed;
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  aspect-ratio: 3/2;
+  background-color: white;
+  overflow: auto;
+  z-index: 2;
+  border: 3px solid #3b81f4;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+.appModal_header {
+  background-color: #1062cd;
+  width: 50%;
+  height: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+.appModal_header_text {
+  color: white;
+  display: flex;
+  justify-self: start;
+  padding-left: 10px;
+  object-fit: contain;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.appModal_header_exit {
+  margin-right: 10px;
+  height: 80%;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/windowsExit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.appModal_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 3%;
+}
+.appModal_content--calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6494aa;
+}
+.appModal_content--calculator_text {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
+  margin-top: 10px;
+  background-color: #3a5764;
+  border-radius: 10%;
+  text-align: center;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_text {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_text {
+    font-size: 16px;
+  }
+}
+.appModal_content--calculator_form {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form {
+    gap: 10px;
+  }
+}
+.appModal_content--calculator_form_header {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 80px;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form_header {
+    margin: 0;
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_form_header {
+    font-size: 50px;
+  }
+}
+.appModal_content--calculator_form_select {
+  background-color: #90a959;
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form_select {
+    font-size: 20px;
+    width: 60px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_form_select {
+    font-size: 30px;
+    width: 80px;
+  }
+}
+.appModal_content--calculator_form_text {
+  font-size: 30px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form_text {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_form_text {
+    font-size: 24px;
+  }
+}
+.appModal_content--calculator_form_input {
+  height: 22px;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form_input {
+    height: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_form_input {
+    height: 24px;
+  }
+}
+.appModal_content--calculator_form_button {
+  background-color: #151515;
+  color: wheat;
+  height: 100%;
+  width: 35%;
+  font-size: 40px;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--calculator_form_button {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--calculator_form_button {
+    font-size: 30px;
+  }
+}
+.appModal_content--toDoList {
+  width: 70%;
+  height: 90%;
+  background-color: #449dd1;
+  border-radius: 25px;
+  box-shadow: 10px 10px 60px #58a5d2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.appModal_content--toDoList_heading {
+  color: lightgray;
+  font-size: 50px;
+}
+.appModal_content--rockPaperScissors {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  gap: 30px;
+}
+.appModal_content--rockPaperScissors_header {
+  font-size: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--rockPaperScissors_header {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--rockPaperScissors_header {
+    font-size: 45px;
+  }
+}
+.appModal_content--rockPaperScissors_heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 1440px) {
+  .appModal_content--rockPaperScissors_heading {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--rockPaperScissors_heading {
+    font-size: 18px;
+  }
+}
+.appModal_content--rockPaperScissors_heading--player {
+  color: green;
+}
+.appModal_content--rockPaperScissors_heading--computer {
+  color: red;
+}
+.appModal_content--rockPaperScissors_heading--result {
+  color: #3b81f4;
+}
+.appModal_content--rockPaperScissors_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.appModal_content--rockPaperScissors_button {
+  height: 50px;
+  width: 100px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  background-color: #f5d0c5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #f5d0c5;
+}
+@media only screen and (min-width: 1440px) and (max-width: 2050px) {
+  .appModal_content--rockPaperScissors_button {
+    font-size: 30px;
+    width: 160px;
+    height: 70px;
+  }
+}
+
+#toDoListContent {
+  background-color: #0e0e52;
+}
+
+#inputBox {
+  position: relative;
+  width: 80%;
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.done {
+  background-color: green;
+}
+
+#toDoListUl {
+  width: 80%;
+  padding-left: 0;
+  overflow-y: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#toDoListUl li {
+  background-color: #78c0e0;
+  margin-top: 15px;
+  font-size: 25px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  box-shadow: 5px 5px 5px #4b6c79;
+  cursor: pointer;
+  color: white;
+}
+
+#toDoListUl li.done {
+  background-color: green;
+}
+
+#toDoListUl li div {
+  width: 30px;
+  height: 30px;
+  padding-right: 15px;
+  content: url(../assets/trash.png);
+}
+
+body {
+  background-image: url("../assets/windowsBackground.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+main {
+  width: 100%;
+  height: 97vh;
+  display: grid;
+  flex-direction: column;
+}
+
+footer {
+  align-self: flex-end;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  position: fixed;
+  height: 3vh;
+}
+
+/*# sourceMappingURL=style.css.map */
